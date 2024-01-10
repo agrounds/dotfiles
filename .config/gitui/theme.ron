@@ -1,0 +1,7 @@
+(
+    selection_bg: Some(Rgb(63, 65, 94)),
+    cmdbar_bg: Some(Rgb(63, 65, 94)),
+    diff_line_add: Some(LightGreen),
+    diff_line_delete: Some(LightRed),
+    commit_author: Some(LightGreen),
+)
