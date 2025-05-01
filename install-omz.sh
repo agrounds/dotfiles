@@ -10,4 +10,6 @@ fi
 mkdir -p "$HOME/.omz/cache/completions"
 
 # custom zsh files
+[ ! -e "$HOME/.omzconfig.zsh" ] && cp .omzconfig.zsh "$HOME/.omzconfig.zsh"
 mkdir -p "$HOME/.zsh"
+# actual plugin.zsh files must be manually copied to above directory
