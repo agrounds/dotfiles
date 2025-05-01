@@ -15,5 +15,6 @@ brew "starship"
 brew "zsh-autosuggestions"
 brew "uv"
 
+cask "docker"
 cask "font-jetbrains-mono-nerd-font"
 cask "obsidian"
