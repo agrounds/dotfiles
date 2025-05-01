@@ -1,0 +1,22 @@
+.DS_Store
+.idea/*
+*.iml
+.classpath
+.project
+.settings/
+target/
+myenv/
+
+.java-version
+local_testing/
+logback-test.xml
+*.swp
+
+node_modules/
+
+__pycache__/
+# coverage.py sqllite DB
+.coverage
+venv/
+.venv/
+.tox/

@@ -15,7 +15,7 @@ Then copy over configs and install/initialize stuff:
 ```zsh
 cp .zshrc ~/.zshrc
 cp .vimrc ~/.vimrc
-./init-dirs.sh
+./init-configs.sh
 ./install-omz.sh
 brew bundle install
 pnpm install -g diff2html-cli
@@ -26,3 +26,4 @@ Finally, copy over any desired custom .zsh files, e.g.
 ```zsh
 cp .zsh/zshconfig.zsh ~/.zsh
 ```
+
