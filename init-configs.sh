@@ -7,5 +7,6 @@ mkdir -p "$HOME/.config"
 [ ! -e "$HOME/.gitconfig" ] && cp .gitconfig "$HOME/.gitconfig"
 [ ! -e "$HOME/.gitignore_global" ] && cp .gitignore_global "$HOME/.gitignore_global"
 
+[ ! -e "$HOME/.vimrc" && cp .vimrc "$HOME/.vimrc"
 mkdir -p "$HOME/.vim/pack/tpope/start"
 [ ! -e "$HOME/.vim/pack/tpope/start/vim-sensible" ] && git clone git@github.com:tpope/vim-sensible.git "$HOME/.vim/pack/tpope/start/vim-sensible"
