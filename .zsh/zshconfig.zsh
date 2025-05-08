@@ -32,6 +32,13 @@ source <(fzf --zsh)
 # change title of diff2html page
 alias prettydiff='diff2html -t "diff2html"'
 
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # misc
 alias clpbcopy='tr -d "\n" | pbcopy'
 alias hg='history | grep'
