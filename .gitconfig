@@ -5,11 +5,20 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	# disable F and X options for less, which git sets by default
+	# with these disabled, paged outputs will always be full screen
+	pager = less -+F -+X
+[pager]
+	branch = false
 [rerere]
 	enabled = 1
 	autoupdate = 1
+[init]
+	defaultBranch = main
 [push]
 	default = matching
+[pull]
+	rebase = false
 [color]
 	ui = auto
 [color "branch"]
@@ -53,22 +62,16 @@
 	last = log -1 HEAD
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  le = log --oneline --decorate
-  lg = log --graph --pretty=format:'%C(bold green)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	le = log --oneline --decorate
+	lg = log --graph --pretty=format:'%C(bold green)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	logtree = log --graph --oneline --decorate --all
 	alias = config --get-regexp ^alias\\.
 	untrack = branch -d -r
-  fetch-tags = "!f() { : git fetch ; git fetch $1 'refs/tags/*:refs/tags/*'; }; f"
-  defbranch = "!f() { git remote show origin | sed -n '/HEAD branch/s/.*: //p'; }; f"
-  done = "!f() { : git checkout ; db=`git defbranch`; git co $db && git branch -d -r origin/$1 && git del $1 && git fetch origin $db && git merge origin/$db; }; f"
-[pager]
-	branch = false
+	fetch-tags = "!f() { : git fetch ; git fetch $1 'refs/tags/*:refs/tags/*'; }; f"
+	defbranch = "!f() { git remote show origin | sed -n '/HEAD branch/s/.*: //p'; }; f"
+	done = "!f() { : git checkout ; db=`git defbranch`; git co $db && git branch -d -r origin/$1 && git del $1 && git fetch origin $db && git merge origin/$db; }; f"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
