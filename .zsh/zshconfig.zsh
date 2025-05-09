@@ -44,4 +44,4 @@ esac
 alias clpbcopy='tr -d "\n" | pbcopy'
 alias hg='history | grep'
 alias kill-dock='killall Dock'
-alias rand-uuid='python -c "import uuid; print(uuid.uuid4())"'
+alias rand-uuid='uv run python -c "import uuid; print(uuid.uuid4())"'
