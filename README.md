@@ -18,7 +18,7 @@ cp .zshrc ~/.zshrc
 ./install-omz.sh
 brew bundle install
 pnpm install -g diff2html-cli
-./init-ipython.sh  # depends on python and ipython
+./init-ipython.sh  # depends on uv and ipython
 ```
 
 Finally, copy over any desired additional custom .zsh files, e.g.
