@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 exec uv --project "$HOME/pyenvs/notebooks" run ipython "$@"
