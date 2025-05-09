@@ -18,10 +18,11 @@ cp .zshrc ~/.zshrc
 ./install-omz.sh
 brew bundle install
 pnpm install -g diff2html-cli
+./init-ipython.sh
 ```
 
-Finally, copy over any desired custom .zsh files, e.g.
+Finally, copy over any desired additional custom .zsh files, e.g.
 
 ```zsh
-cp .zsh/zshconfig.zsh ~/.zsh
+cp .zsh/c.zsh ~/.zsh
 ```

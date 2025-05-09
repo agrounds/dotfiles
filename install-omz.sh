@@ -10,4 +10,5 @@ createdir "$HOME/.omz/cache/completions"
 # custom zsh files
 safecopy .omzconfig.zsh "$HOME/.omzconfig.zsh"
 createdir "$HOME/.zsh"
-echo "please manually copy any desired configurations from $(dirname "$0")/.zsh to $HOME/.zsh"
+safecopy .zsh/zshconfig.zsh "$HOME/.zsh/zshconfig.zsh"
+echo "please manually copy any desired additional configurations from $(dirname "$0")/.zsh to $HOME/.zsh"
