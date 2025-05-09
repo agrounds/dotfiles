@@ -12,6 +12,7 @@ export PATH
 export CLICOLOR=1
 # Customize ls colors
 export LSCOLORS=GxFxCxDxBxegedabagaced
+zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
 
 # colorize plugin
 export ZSH_COLORIZE_TOOL=pygmentize
