@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec uv --project "$HOME/pyenvs/notebooks" run ipython "$@"

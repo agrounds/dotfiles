@@ -1,12 +1,18 @@
 #!/usr/bin/env zsh
 
-mkdir -p "$HOME/bin"
-mkdir -p "$HOME/.config"
-[ ! -e "$HOME/.config/starship.toml" ] && cp .config/starship.toml "$HOME/.config/starship.toml"
+source "$(dirname "$0")/functions.zsh"
 
-[ ! -e "$HOME/.gitconfig" ] && cp .gitconfig "$HOME/.gitconfig"
-[ ! -e "$HOME/.gitignore_global" ] && cp .gitignore_global "$HOME/.gitignore_global"
+createdir "$HOME/bin"
+for f in bin/*; do
+  safecopy "$f" "$HOME/$f"
+done
 
-[ ! -e "$HOME/.vimrc" && cp .vimrc "$HOME/.vimrc"
-mkdir -p "$HOME/.vim/pack/tpope/start"
-[ ! -e "$HOME/.vim/pack/tpope/start/vim-sensible" ] && git clone git@github.com:tpope/vim-sensible.git "$HOME/.vim/pack/tpope/start/vim-sensible"
+createdir "$HOME/.config"
+safecopy .config/starship.toml "$HOME/.config/starship.toml"
+
+safecopy .gitconfig "$HOME/.gitconfig"
+safecopy .gitignore_global "$HOME/.gitignore_global"
+
+safecopy .vimrc "$HOME/.vimrc"
+createdir "$HOME/.vim/pack/tpope/start"
+safeclone git@github.com:tpope/vim-sensible.git "$HOME/.vim/pack/tpope/start/vim-sensible"
