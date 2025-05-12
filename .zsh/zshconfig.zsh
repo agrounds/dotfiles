@@ -1,7 +1,7 @@
 set -o vi
 
 path=(
-  "/usr/local/opt/python/libexec/bin" # homebrew python executables
+  "/opt/homebrew/opt/python/libexec/bin"
   "$HOME/bin"
   "$HOME/.local/bin"
   $path
