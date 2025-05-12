@@ -10,13 +10,16 @@ Install the following manually:
 3. sdkman
 4. nvm
 
-Then copy over configs and install/initialize stuff:
+Follow the post-install instructions for homebrew. Then copy over configs and
+install/initialize stuff:
 
 ```zsh
 cp .zshrc ~/.zshrc
 ./init-configs.sh
 ./install-omz.sh
 brew bundle install
+# install a version of node so we can use pnpm
+nvm install --lts
 pnpm install -g diff2html-cli
 ```
 
