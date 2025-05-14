@@ -3,3 +3,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set hidden
 " override pep8
 autocmd FileType python set tabstop=2 shiftwidth=2 expandtab
+
+" default to searching with 'very magic' regex
+nnoremap / /\v
+vnoremap / /\v
