@@ -33,9 +33,9 @@ cp .zsh/c.zsh ~/.zsh
 
 The `init-configs.sh` script installs an `ipython` wrapper script which invokes
 `ipython` using a `uv`-managed project at `$HOME/pyenvs/notebooks`. To make use
-of it, manually `uv init` this projec and `uv add ipython` to it. Then,
+of it, manually `uv init` this project and `uv add ipython` to it. Then,
 whenever you need a dependency in your `ipython` sessions, you can just add it
-to the `notebooks` project and it'll always be available from then on.
+to the `notebooks` project and it'll be available in all future sessions.
 
 ### Colors
 
