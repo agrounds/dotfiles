@@ -23,8 +23,21 @@ nvm install --lts
 pnpm install -g diff2html-cli
 ```
 
-Finally, copy over any desired additional custom .zsh files, e.g.
+Next, copy over any desired additional custom .zsh files, e.g.
 
 ```zsh
 cp .zsh/c.zsh ~/.zsh
 ```
+
+## IPython setup
+
+The `init-configs.sh` script installs an `ipython` wrapper script which invokes
+`ipython` using a `uv`-managed project at `$HOME/pyenvs/notebooks`. To make use
+of it, manually `uv init` this projec and `uv add ipython` to it. Then,
+whenever you need a dependency in your `ipython` sessions, you can just add it
+to the `notebooks` project and it'll always be available from then on.
+
+### Colors
+
+To fix the horrible default `ipython` colors, take a look at
+[this guide](https://wiki.groundsfam.com/programming/python/ipython-colors-and-other-configuration).
