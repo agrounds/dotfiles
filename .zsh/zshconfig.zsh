@@ -40,6 +40,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# jujutsu
+source <(COMPLETE=zsh jj)
+
 # misc
 alias clpbcopy='tr -d "\n" | pbcopy'
 alias hg='history | grep'
