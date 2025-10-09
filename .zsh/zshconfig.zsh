@@ -19,6 +19,9 @@ export ZSH_COLORIZE_TOOL=pygmentize
 export ZSH_COLORIZE_STYLE="dracula"
 alias less="cless"
 
+# configure z (jump)
+ZSHZ_NO_RESOLVE_SYMLINKS=1
+
 # save an unreasonably large amount of zsh history
 export HISTSIZE=999999999
 export SAVEHIST=$HISTSIZE
@@ -39,6 +42,9 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# mise
+eval "$(mise activate zsh)"
 
 # jujutsu
 source <(COMPLETE=zsh jj)
