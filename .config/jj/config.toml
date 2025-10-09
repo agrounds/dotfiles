@@ -1,0 +1,20 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Alex Grounds"
+email = "agrounds90@gmail.com"
+
+[ui]
+diff-editor = ":builtin"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
+editor = "vim"
+
+[aliases]
+# bookmark helpers
+bhere = ["bookmark", "set", "-r", "@"]
+bmv = ["bookmark", "set", "-r"]
+del = ["bookmark", "forget", "--include-remotes"]
+fetch = ["git", "fetch", "-b"]
+push = ["git", "push", "--allow-new", "-b"]
+# logs
+log-all = ["log", "-r", "all()"]
