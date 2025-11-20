@@ -15,6 +15,6 @@ bhere = ["bookmark", "set", "-r", "@"]
 bmv = ["bookmark", "set", "-r"]
 del = ["bookmark", "forget", "--include-remotes"]
 fetch = ["git", "fetch", "-b"]
-push = ["git", "push", "-b"]
+push = ["git", "push", "--allow-new", "-b"]
 # logs
 log-all = ["log", "-r", "all()"]
