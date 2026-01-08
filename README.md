@@ -8,7 +8,6 @@ Install the following manually:
 1. iTerm
 2. homebrew
 3. sdkman
-4. nvm
 
 Follow the post-install instructions for homebrew. Then copy over configs and
 install/initialize stuff:
@@ -19,7 +18,7 @@ cp .zshrc ~/.zshrc
 ./install-omz.sh
 brew bundle install
 # install a version of node so we can use pnpm
-nvm install --lts
+mise install node@lts
 pnpm install -g diff2html-cli
 ```
 

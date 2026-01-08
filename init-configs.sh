@@ -10,6 +10,9 @@ done
 createdir "$HOME/.config"
 safecopy .config/starship.toml "$HOME/.config/starship.toml"
 
+createdir "$HOME/.config/mise"
+safecopy .config/mise/config.copy.toml "$HOME/.config/mise/config.toml"
+
 safecopy .gitconfig "$HOME/.gitconfig"
 safecopy .gitignore_global "$HOME/.gitignore_global"
 

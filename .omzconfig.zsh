@@ -1,8 +1,3 @@
-# Plugin settings
-# These must be set before plugins are loaded, hence they're stored here
-zstyle ':omz:plugins:nvm' lazy yes            # instruct nvm plugin to lazy-load nvm itself
-zstyle ':omz:plugins:nvm' lazy-cmd diff2html  # add extra commands to trigger loading of nvm
-
 # some omz plugins rely on these directories
 export ZSH_CACHE_DIR="$HOME/.omz/cache"
 mkdir -p "$ZSH_CACHE_DIR/completions"
