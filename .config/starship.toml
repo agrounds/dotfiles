@@ -12,5 +12,22 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 [package]
 disabled = true
 
+[git_branch]
+disabled = true
+
+[git_commit]
+disabled = true
+
 [java]
-style = '#bf5700'
+disabled = true
+# style = '#bf5700'
+
+[kotlin]
+disabled = true
+
+[gradle]
+disabled = true
+
+[python]
+disabled = true
+
